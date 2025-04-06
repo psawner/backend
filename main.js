@@ -6,6 +6,10 @@ import { GoogleGenAI } from "@google/genai";
 dotenv.config();  // ✅ Load .env variables
 
 const app = express();
+app.get('/', (req, res) => {
+  res.send('✅ Backend is up and running on Render!');
+});
+
 app.use(express.json());
 app.use(cors()); // Allow frontend access
 
